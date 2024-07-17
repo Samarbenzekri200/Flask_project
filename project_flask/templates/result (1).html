@@ -1,0 +1,53 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f59999;
+            text-align: center;
+        }
+
+        h1 {
+            color: #380303;
+        }
+
+        p {
+            font-family: cursive;
+            color: #0810ff;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #4caf50;
+            color: #fff787;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #1ce126;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    
+    {% if prediction == 1 %}
+        <p>The person is predicted to be a fraud.</p>
+    {% else %}
+        <p>The person is predicted not to be a fraud.</p>
+    {% endif %}
+
+    <a href="/">Go back</a>
+</body>
+</html>
